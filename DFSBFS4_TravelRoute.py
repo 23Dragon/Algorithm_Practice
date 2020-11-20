@@ -27,6 +27,7 @@ def solution(tickets):
             # 길이 없다면 다시 넣어주자
             routes[key].insert(idx, value)
     
+    # 알파벳 우선순위 정렬
     routes = init_path()
     for r in routes:
         routes[r].sort()
