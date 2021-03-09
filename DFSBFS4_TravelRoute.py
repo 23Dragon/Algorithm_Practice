@@ -17,17 +17,17 @@ def solution(tickets):
             pt = path[:]
             pt.append(value)
 
-            # 일단 보내보자
+            # 
             rt = dfs(value, pt)
 
-            # 길이 있다면 리턴 되었을 것
+            # 
             if rt:
                 return rt
             
-            # 길이 없다면 다시 넣어주자
+            # 
             routes[key].insert(idx, value)
     
-    # 알파벳 우선순위 정렬
+    # 
     routes = init_path()
     for r in routes:
         routes[r].sort()
