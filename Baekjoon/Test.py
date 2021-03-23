@@ -1,12 +1,8 @@
-h, m = [int(x) for x in input().split()]
-h_, m_ = h, m
-if m >= 45:
-    m_ -= 45
-else:
-    if h == 0:
-        h_ = 23
-        m_ = 60 - (m-45)
-    else:
-        m_ -= 45
+N = int(input())
+inputs = []
+for i in range(N):
+    inputs.append(input())
 
-print(h_, m_)
+for i in inputs:
+    for idx, value in enumerate(i):
+        
