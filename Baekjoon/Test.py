@@ -1,31 +1,12 @@
-<<<<<<< HEAD
-=======
-n = int(input())
-_inputs = []
-for i in range(n):
-    _inputs.append(input())
+h, m = [int(x) for x in input().split()]
+h_, m_ = h, m
+if m >= 45:
+    m_ -= 45
+else:
+    if h == 0:
+        h_ = 23
+        m_ = 60 - (m-45)
+    else:
+        m_ -= 45
 
-
-answer = 0
-for i in _inputs:    
-    tmp = []
-    for idx, value in enumerate(i):
-        if value not in tmp:
-            tmp.append(value)
-        else:
-            if i[idx-1] == value:
-                tmp.append(value)
-                if idx == len(i)-1:
-                    print(idx, value)
-                    answer += 1
-            else:
-                break
-        
-
-print(answer)
-
-
-
-
-        
->>>>>>> c395a489a0edb6407132a74f51714998bd1f306f
+print(h_, m_)
