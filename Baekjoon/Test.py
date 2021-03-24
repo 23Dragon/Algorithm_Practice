@@ -1,8 +1,6 @@
-N = int(input())
-inputs = []
-for i in range(N):
-    inputs.append(input())
+# 1
+# 2 ~ 7 (6) -> 1
+# 8 ~ 19 (12) -> 2
+# 20 ~ 37 (18) -> 3
 
-for i in inputs:
-    for idx, value in enumerate(i):
-        
+
