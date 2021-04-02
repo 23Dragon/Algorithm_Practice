@@ -1,9 +1,28 @@
-N = int(input())
+cnt = 0
 
-for i in range(1, 1000000001):
-    result = 3*i**2 -(9*i) + 9
-    if result >= N:
-        print(i-1)
-        break
+def recursion(n, start, end):
+    # f(ABC, 1, 3)
+    # => f(AB, 1, 2) + f(C, 1, 3) + f(AB, 2, 3)
+    if n == 1:
+        print(start, end)
+        return
+    
+    check = {start: 1, end: 1}
+    print(check)
+    print(check[1])
+    c = [x for x in range(1, 4) if x not in check]
+    
+    
+    #recursion(n-1, start, )
+    global cnt
+    
 
 
+def solution(N):    
+    recursion(N, 2, 3)    
+
+
+
+if __name__ == "__main__":
+    N = int(input())
+    print(solution(N))
