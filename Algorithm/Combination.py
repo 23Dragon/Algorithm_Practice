@@ -1,13 +1,14 @@
-def combi(level, start):
-    if level == r:
+def combi(r_idx, begin):
+    if r_idx == r:
         print(result)
     else:
-        for i in range(start, n):
-            result[level] = arr[i]
-            combi(level+1, i+1)
+        for i in range(begin, n):
+            result[r_idx] = arr[i]
+            combi(r_idx+1, i+1)
 
 if __name__ == "__main__":
-    n, r = 3, 2
-    arr = [x for x in range(n)]
+    n, r = 4, 2
     result = [0] * r
-    combi(0, 0) # level, start
+    arr = [(x+1) for x in range(n)]
+    
+    combi(0, 0)
