@@ -1,12 +1,12 @@
-def permu(r_idx):
-    if r_idx == r:
+def permu(level):
+    if level == r:
         print(result)
     else:
         for i in range(n):
             if check[i] == 0:
-                result[r_idx] = arr[i]
+                result[level] = arr[i]
                 check[i] = 1
-                permu(r_idx+1)
+                permu(level+1)
                 check[i] = 0
 
 if __name__ == "__main__":
