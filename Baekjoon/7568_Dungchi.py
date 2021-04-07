@@ -1,9 +1,16 @@
 
+def solve(n, array):
+    
 
 if __name__ == "__main__":
     N = int(input())
+    arr = list()    
+    for i in range(N):
+        w, h = map(int, input().split())
+        arr.append((w, h))
     
-
+    solve(N, arr)
+    
 
 '''
 5
