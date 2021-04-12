@@ -11,8 +11,10 @@ def permu(level):
 
 if __name__ == "__main__":
     n, r = 4, 2
-    arr = [(x+1) for x in range(n)]
+    arr = [int(x) for x in range(n)]
     result = [0] * r
     check = [0] * n
 
     permu(0)
+
+    
