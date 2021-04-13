@@ -1,7 +1,6 @@
 def solve(level):
     if level == M:        
-        [print(x, end=' ') for x in result]
-        print()
+        print(' '.join(map(str, result)))
     else:
         for i in range(N):
             if check[i] == 0:
