@@ -14,8 +14,6 @@ def main():
             combi(level+1, i+1)
 
 
-        
-
     combi(0, 0)
 
     
