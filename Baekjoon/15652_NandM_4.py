@@ -1,13 +1,11 @@
-def solve(level):
+def solve(level, begin):
     if level == M:
         print(' '.join(map(str, result)))
     else:
-        for i in range(N):
-            if check[i] == 0: 
-                result[level] = arr[i]
-                check[i] = 1
-                solve(level+1)
-                check[i] = 0
+        for i in range(begin, N):
+            result[level] = arr[i]
+            solve(level+1, i)
+
 
 if __name__ == "__main__":
     N, M = map(int, input().split())
@@ -15,7 +13,7 @@ if __name__ == "__main__":
     result = [0] * M
     check = [0] * N
 
-    solve(0)
+    solve(0, 0)
 
 '''
 4 2
