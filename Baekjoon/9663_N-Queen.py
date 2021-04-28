@@ -7,6 +7,28 @@ N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 
 
 92
 '''
+def check_in(i, j):
+    for k in range(1, 16):
+        print(i, j, k)
+        if i-k >= 0 and j-k >= 0:
+            check[i-k][j-k] = 1
+        if i-k >= 0:
+            check[i-k][j] = 1
+        if i-k >= 0 and j+k <= N:
+            check[i-k][j+k] = 1
+        if j-k >= 0:
+            check[i][j-k] = 1
+        if j+k <= N:
+            check[i][j+k] = 1
+        if i+k <= N and j-k >= 0:
+            check[i+k][j-k] = 1
+        if i+k <= N:
+            check[i+k][j] = 1
+        if i+k <= N and j+k <= N:
+            check[i+k][j+k] = 1
+    
+        
+
 def solve(i, j, rem):
     if i >= N and j >= N and rem > 0:
         return
@@ -15,7 +37,9 @@ def solve(i, j, rem):
         return
     
     # check_in
-    # dfs
+    check_in(i, j)
+    print(check)
+    # recursion
     
     # check_out
     
