@@ -2,11 +2,18 @@ from itertools import combinations
 
 def solution(orders, course):
     answer = []
+    
+    course_dict = dict()
 
-    order = list(map(str, ''.join(orders[0])))
-    combi = combination
-    #for cnt in course:
-        # cnt is pick count
+    for cnt in course:
+        #cnt is pick count
+        for order in orders:
+            order_list = list(map(str, ''.join(order)))
+            combi = list(combinations(order_list, cnt))            
+            print('order : ', order)
+            print(combi)
+
+        
         
 
 
