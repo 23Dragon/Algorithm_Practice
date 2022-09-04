@@ -1,17 +1,17 @@
 if __name__ == "__main__":
     N = int(input())
     
-    result = 5001
+    count = 5001
     
-    # 5
-    if N % 5 == 0:
-        result = N / 5
+    min_count = N // 3 + 1
     
-    # 3
-    if N % 3 == 0:
-        result = min(result, N / 3)
-    
-    # 5 & 3
-    n = N / 5
-    m = N % 5
+    for i in range(min_count):
+        for j in range(min_count):            
+            if N == 3*i + 5*j:                
+                count = min(i+j, count)
+
+    if count == 5001:
+        print(-1)
+    else:
+        print(count)
     
