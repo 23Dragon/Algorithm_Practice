@@ -14,7 +14,7 @@ if __name__ == "__main__":
     M = int(input())
     N = int(input())
     
-    min_prime = 101
+    min_prime = 10001
     sum_prime = 0
     
     for i in range(M, N+1):
