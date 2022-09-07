@@ -10,10 +10,12 @@ def isPrime(x):
 
 if __name__ == "__main__":
     
-    prime_arr = []
-    for i in range(2, 123456*2+1):
+    prime_arr = [0]*(123456*2+1)
+    for i in range(2, 123456*2+1):        
         if isPrime(i):
-            prime_arr.append(i)
+            prime_arr[i] = True
+        else:
+            prime_arr[i] = False
     
     while True:        
         n = int(input())
@@ -21,11 +23,10 @@ if __name__ == "__main__":
             break
         
         count = 0
-        for i in range(n, 2*n+1):
-            if i in prime_arr:
-                count += 1
-        
+            
+        for i in range(n+1, (2*n)+1):            
+            if prime_arr[i]:
+                count += 1        
             
             
         print(count)
-        
